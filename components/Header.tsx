@@ -1,15 +1,23 @@
+import Link from 'next/link';
+
 export const Header = () => {
   return (
-    <header className='mt-1 flex w-full flex-col items-center justify-between font-bold'>
+    <header className='mb-4 mt-1 flex w-full flex-col items-center justify-between font-bold'>
       <div className='flex w-full'>
         <h1 className='text-6xl'>.store</h1>
         <nav className='flex w-full items-center justify-end gap-8'>
-          <div className='flex h-full w-24 items-center justify-center rounded-lg hover:border-2'>
+          <Link
+            href='/'
+            className='flex h-full w-24 items-center justify-center rounded-lg hover:border-2'
+          >
             Home
-          </div>
-          <div className='flex h-full w-24 items-center justify-center rounded-lg hover:border-2'>
+          </Link>
+          <Link
+            href='/products'
+            className='flex h-full w-24 items-center justify-center rounded-lg hover:border-2'
+          >
             Products
-          </div>
+          </Link>
           <div className='flex h-full w-24 items-center justify-center rounded-lg hover:border-2'>
             Cart
           </div>
@@ -17,18 +25,30 @@ export const Header = () => {
       </div>
 
       <nav className='flex w-full justify-center gap-16 border-b-2 border-t-2'>
-        <div className='flex h-12 w-24 items-center justify-center rounded-lg text-center hover:border-2'>
+        <Link
+          href='/products/pc'
+          className='flex h-12 w-24 items-center justify-center rounded-lg text-center hover:border-2'
+        >
           PC
-        </div>{' '}
-        <div className='flex h-12 w-24 items-center justify-center rounded-lg text-center hover:border-2'>
+        </Link>
+        <Link
+          href='/products/tv'
+          className='flex h-12 w-24 items-center justify-center rounded-lg text-center hover:border-2'
+        >
           TV
-        </div>{' '}
-        <div className='flex h-12 w-24 items-center justify-center rounded-lg text-center hover:border-2'>
+        </Link>
+        <Link
+          href='/products/valo-skins'
+          className='flex h-12 w-24 items-center justify-center rounded-lg text-center hover:border-2'
+        >
           Valo skins
-        </div>{' '}
-        <div className='flex h-12 w-24 items-center justify-center rounded-lg text-center hover:border-2'>
+        </Link>
+        <Link
+          href='/products/gay-porn'
+          className='flex h-12 w-24 items-center justify-center rounded-lg text-center hover:border-2'
+        >
           Gay porn
-        </div>
+        </Link>
       </nav>
     </header>
   );
