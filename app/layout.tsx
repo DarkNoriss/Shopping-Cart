@@ -11,9 +11,9 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang='en'>
       <body>
-        <main>
+        <main className='flex h-screen min-h-full w-screen flex-col overflow-hidden bg-gray-800 px-16'>
           <Header />
-          {children}
+          <div className='flex flex-1 justify-center'>{children}</div>
           <Footer />
         </main>
       </body>
