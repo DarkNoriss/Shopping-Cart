@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "name": "GAYMING PC V1",
+    "price": 749,
+    "tag": "pc",
+    "imgUrl": ""
+  },
+  {
+    "id": 2,
+    "name": "GAYMING PC V2",
+    "price": 1249,
+    "tag": "pc",
+    "imgUrl": ""
+  },
+  {
+    "id": 3,
+    "name": "GAYMING PC V3",
+    "price": 9499,
+    "tag": "pc",
+    "imgUrl": ""
+  },
+  {
+    "id": 4,
+    "name": "GAYMING TV",
+    "price": 9499,
+    "tag": "tv",
+    "imgUrl": ""
+  },
+  {
+    "id": 5,
+    "name": "DOGSHIT TV",
+    "price": 249,
+    "tag": "tv",
+    "imgUrl": ""
+  },
+  {
+    "id": 6,
+    "name": "MIDTIER TV",
+    "price": 1249,
+    "tag": "tv",
+    "imgUrl": ""
+  },
+  {
+    "id": 7,
+    "name": "U BROKE CLASSIC",
+    "price": 49,
+    "tag": "valo-skins",
+    "imgUrl": ""
+  },
+  {
+    "id": 8,
+    "name": "EDATER PHANTOM",
+    "price": 499,
+    "tag": "valo-skins",
+    "imgUrl": ""
+  },
+  {
+    "id": 9,
+    "name": "GETTIN BITCHES OPERATOR",
+    "price": 2499,
+    "tag": "valo-skins",
+    "imgUrl": ""
+  },
+  {
+    "id": 10,
+    "name": "IM ABOUT TO CUM",
+    "price": 99,
+    "tag": "gay-porn",
+    "imgUrl": ""
+  },
+  {
+    "id": 11,
+    "name": "KISS A HOMIE",
+    "price": 2249,
+    "tag": "gay-porn",
+    "imgUrl": ""
+  },
+  {
+    "id": 12,
+    "name": "BILLY WOULD BE PROUD",
+    "price": 19999,
+    "tag": "gay-porn",
+    "imgUrl": ""
+  }
+]
