@@ -18,8 +18,11 @@ export const Header = () => {
           >
             Products
           </Link>
-          <div className='flex h-full w-24 items-center justify-center rounded-lg hover:border-2'>
-            Cart
+          <div className='relative flex h-full w-24 items-center justify-center rounded-lg hover:border-2'>
+            <span>Cart</span>
+            <div className='absolute bottom-2 right-2 flex aspect-square w-6 translate-x-1/4 translate-y-1/4 items-center justify-center rounded-full bg-red-600'>
+              6
+            </div>
           </div>
         </nav>
       </div>
