@@ -1,5 +1,7 @@
+import { FilteredItems } from '@/components/FilteredItems';
+
 const TV = () => {
-  return <div>TV</div>;
+  return <FilteredItems tag='TV' />;
 };
 
 export default TV;

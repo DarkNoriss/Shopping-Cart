@@ -1,5 +1,7 @@
+import { FilteredItems } from '@/components/FilteredItems';
+
 const GayPorn = () => {
-  return <div>Gay Porn</div>;
+  return <FilteredItems tag='Gay porn' />;
 };
 
 export default GayPorn;

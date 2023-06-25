@@ -1,5 +1,7 @@
+import { FilteredItems } from '@/components/FilteredItems';
+
 const ValoSkins = () => {
-  return <div>Valorant skins</div>;
+  return <FilteredItems tag='Valorant skins' />;
 };
 
 export default ValoSkins;

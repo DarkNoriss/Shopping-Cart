@@ -1,5 +1,7 @@
+import { FilteredItems } from '@/components/FilteredItems';
+
 const PC = () => {
-  return <div>PC</div>;
+  return <FilteredItems tag='PC' />;
 };
 
 export default PC;
