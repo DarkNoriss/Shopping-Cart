@@ -6,7 +6,7 @@ const Home = () => {
           SOME AD
         </div>
         <div className='flex-1 border-b-2 border-t-2'>
-          <h2 className='mt-2'>Recommended</h2>
+          <h2 className='mt-2 text-xl'>Recommended</h2>
         </div>
       </div>
     </>
