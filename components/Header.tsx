@@ -1,10 +1,16 @@
+'use client';
+
+import { useShoppingCart } from '@/context/ShoppingCartContext';
 import Link from 'next/link';
 
 export const Header = () => {
+  const { getQuantity } = useShoppingCart();
+  const quantity = getQuantity();
+
   return (
     <header className='mb-4 mt-1 flex w-full flex-col items-center justify-between font-bold'>
       <div className='flex w-full'>
-        <h1 className='text-6xl'>.store</h1>
+        <h1 className='text-6xl'>Gaymer.store</h1>
         <nav className='flex w-full items-center justify-end gap-8'>
           <Link
             href='/'
@@ -18,12 +24,15 @@ export const Header = () => {
           >
             Products
           </Link>
-          <div className='relative flex h-full w-24 items-center justify-center rounded-lg hover:border-2'>
+          <Link
+            href='/cart'
+            className='relative flex h-full w-24 items-center justify-center rounded-lg hover:border-2'
+          >
             <span>Cart</span>
             <div className='absolute bottom-2 right-2 flex aspect-square w-6 translate-x-1/4 translate-y-1/4 items-center justify-center rounded-full bg-red-600'>
-              6
+              {quantity}
             </div>
-          </div>
+          </Link>
         </nav>
       </div>
 
