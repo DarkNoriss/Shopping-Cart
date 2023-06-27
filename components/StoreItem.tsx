@@ -2,6 +2,8 @@
 
 import { useShoppingCart } from '@/context/ShoppingCartContext';
 import React from 'react';
+import { QuantityDisplay } from './QuantityDisplay';
+import { formatCurrency } from '@/utils/formatCurrency';
 
 type StoreItemProps = {
   id: number;
@@ -18,18 +20,14 @@ export const StoreItem: React.FC<StoreItemProps> = ({
   tag,
   imgUrl,
 }) => {
-  const {
-    getItemQuantity,
-    decreaseCartQuantity,
-    increaseCartQuantity,
-    removeFromCart,
-  } = useShoppingCart();
+  const { getItemQuantity, increaseCartQuantity, removeFromCart } =
+    useShoppingCart();
   const quantity = getItemQuantity(id);
 
   return (
     <>
       <span className='text-sm'>{name}</span>
-      <span className='text-sm'>${price}</span>
+      <span className='text-sm'>{formatCurrency(price)}</span>
       <div className=''>
         {quantity === 0 ? (
           <button className='w-full' onClick={() => increaseCartQuantity(id)}>
@@ -37,24 +35,9 @@ export const StoreItem: React.FC<StoreItemProps> = ({
           </button>
         ) : (
           <div className='flex flex-col items-center justify-center gap-1'>
-            <div className='flex gap-2'>
-              <button
-                className='w-6 rounded bg-blue-600'
-                onClick={() => decreaseCartQuantity(id)}
-              >
-                -
-              </button>
-              <span>{quantity}</span>
-              <button
-                className='w-6 rounded bg-blue-600'
-                onClick={() => increaseCartQuantity(id)}
-              >
-                +
-              </button>
-            </div>
-
+            <QuantityDisplay id={id} quantity={quantity} />
             <button
-              className='w-20 rounded bg-red-600'
+              className='w-24 rounded bg-red-600'
               onClick={() => removeFromCart(id)}
             >
               Remove
