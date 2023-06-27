@@ -4,9 +4,11 @@ import { ReactNode, createContext, useContext, useState } from 'react';
 
 type ShoppingCartContextType = {
   getItemQuantity: (id: number) => number;
+  getQuantity: () => number;
   increaseCartQuantity: (id: number) => void;
   decreaseCartQuantity: (id: number) => void;
   removeFromCart: (id: number) => void;
+  getCart: () => CartItem[];
 };
 
 const ShoppingCartContext = createContext({} as ShoppingCartContextType);
@@ -18,10 +20,12 @@ export const useShoppingCart = () => {
 type ShoppingCartProviderType = {
   children: ReactNode;
 };
+
 type CartItem = {
   id: number;
   quantity: number;
 };
+
 export const ShoppingCartProvider: React.FC<ShoppingCartProviderType> = ({
   children,
 }) => {
@@ -29,6 +33,10 @@ export const ShoppingCartProvider: React.FC<ShoppingCartProviderType> = ({
 
   const getItemQuantity = (id: number) => {
     return cartItems.find((item) => item.id === id)?.quantity || 0;
+  };
+
+  const getQuantity = () => {
+    return cartItems.reduce((total, { quantity }) => total + quantity, 0);
   };
 
   const increaseCartQuantity = (id: number) => {
@@ -69,13 +77,19 @@ export const ShoppingCartProvider: React.FC<ShoppingCartProviderType> = ({
     });
   };
 
+  const getCart = () => {
+    return cartItems;
+  };
+
   return (
     <ShoppingCartContext.Provider
       value={{
         getItemQuantity,
+        getQuantity,
         increaseCartQuantity,
         decreaseCartQuantity,
         removeFromCart,
+        getCart,
       }}
     >
       {children}
