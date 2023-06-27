@@ -4,8 +4,8 @@ import { ShoppingCartProvider } from '@/context/ShoppingCartContext';
 import '@/styles/globals.css';
 
 export const metadata = {
-  title: 'Shopping Cart',
-  description: 'Copy of x-kom.pl',
+  title: 'Gaymer Shop',
+  description: 'Gaming Shop',
 };
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
