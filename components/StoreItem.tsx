@@ -13,21 +13,14 @@ type StoreItemProps = {
   imgUrl: string;
 };
 
-export const StoreItem: React.FC<StoreItemProps> = ({
-  id,
-  name,
-  price,
-  tag,
-  imgUrl,
-}) => {
-  const { getItemQuantity, increaseCartQuantity, removeFromCart } =
-    useShoppingCart();
+export const StoreItem: React.FC<StoreItemProps> = ({ id, name, price, imgUrl }) => {
+  const { getItemQuantity, increaseCartQuantity, removeFromCart } = useShoppingCart();
   const quantity = getItemQuantity(id);
 
   return (
-    <>
-      <span className='text-sm'>{name}</span>
-      <span className='text-sm'>{formatCurrency(price)}</span>
+    <div className='flex h-64 flex-col justify-end rounded-lg bg-gray-600 p-1 px-2'>
+      <span className='text-base'>{name}</span>
+      <span className='text-right text-sm'>{formatCurrency(price)}</span>
       <div className=''>
         {quantity === 0 ? (
           <button className='w-full' onClick={() => increaseCartQuantity(id)}>
@@ -45,6 +38,6 @@ export const StoreItem: React.FC<StoreItemProps> = ({
           </div>
         )}
       </div>
-    </>
+    </div>
   );
 };

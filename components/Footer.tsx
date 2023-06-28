@@ -8,7 +8,13 @@ export const Footer = () => {
         target='_blank'
         className='flex cursor-pointer flex-row items-center gap-1 hover:brightness-75'
       >
-        <Image src='assets/icons/github.svg' alt='github_icon' height={24} width={24} />
+        <Image
+          src='/assets/icons/github.svg'
+          alt='github_icon'
+          height={24}
+          width={24}
+          className='fill'
+        />
         <h3>DarkNoriss</h3>
       </a>
     </footer>
